@@ -18,51 +18,32 @@ And below is finished iteration list:
 Now start with step1 for iteration 2.
 
 # %% assistant
-I'll start with Step 1 for Iteration 2. Let me review the inputs based on the iteration plan and requirements.
+I'll start with Step 1 for Iteration 2. Let me review the inputs based on the ADD process.
 
 ## Step 1: Review Inputs
 
 **Design Purpose**: Address high-priority performance and reliability requirements for the Hotel Pricing System.
 
-**Primary Functional Requirements**: 
-- HPS-2 (Change Prices) - Core business functionality requiring performance optimization
+**Primary Functional Requirements**:
+- HPS-2: Change Prices - Core business function requiring 100ms publication performance (QA-1)
 
 **Quality Attribute Scenarios**:
-- QA-1 (Performance): 100ms price publication SLA
-- QA-2 (Reliability): 100% successful price change publication
-- QA-4 (Scalability): Support 100K-1M daily queries with <20% latency increase
-- QA-8 (Monitorability): Collect performance and reliability metrics
+- QA-1: Performance - 100ms price publication requirement for base rate changes
+- QA-2: Reliability - 100% successful price publication to external systems
+- QA-4: Scalability - Support 100k-1M daily price queries with minimal latency impact
+- QA-8: Monitorability - Collect performance and reliability metrics for price publication
 
-**Constraints**:
-- CON-5 (REST APIs) - Initial interaction protocol
-- CON-6 (Cloud-native) - Favored approach
+**Design Constraints**:
+- CON-2: Cloud hosting environment
+- CON-5: REST APIs for external system integration
+- CON-6: Cloud-native approach
 
 **Architectural Concerns**:
-- CRN-4 (Avoid technical debt) - Important for long-term maintainability
+- CRN-4: Avoid introducing technical debt
+- CRN-5: Set up continuous deployment infrastructure
 
-**Input Assessment**: The inputs appear sufficient and well-defined for addressing performance and reliability drivers. The specific SLAs (100ms publication, 100% reliability) provide clear targets for design decisions.
+The inputs appear sufficient and build upon the foundation established in Iteration 1. The performance requirement (QA-1) is particularly challenging with the 100ms publication SLA, and reliability (QA-2) requires 100% success rate for price changes.
 
-Ready to proceed to Step 2?
-
-# %% user
-then step2 for iteration 2.
-
-# %% assistant
-## Step 2: Establish Iteration Goal and Select Inputs
-
-**Iteration Goal**: Design and implement architectural patterns to meet strict performance SLAs (100ms price publication) and ensure 100% reliability for price change operations, while establishing monitoring capabilities for performance measurement.
-
-**Selected Drivers for This Iteration**:
-- **HPS-2 (Change Prices)** - Primary business function requiring performance optimization
-- **QA-1 (Performance)** - 100ms price publication SLA during normal operation
-- **QA-2 (Reliability)** - 100% successful price change publication and delivery to channel management
-- **QA-4 (Scalability)** - Support 100K-1M daily queries with <20% latency degradation
-- **QA-8 (Monitorability)** - Collect 100% of performance and reliability metrics
-- **CON-6 (Cloud-native)** - Favored architectural approach
-- **CRN-4 (Avoid technical debt)** - Ensure sustainable performance solutions
-
-The focus is on the critical path of price change operations where performance and reliability directly impact business operations and financial outcomes.
-
-Ready to proceed to Step 3?
+I've reviewed the inputs for Iteration 2. Should I proceed to Step 2?
 
 # %% user
